@@ -25,6 +25,6 @@ print("Sorting Process:")
 bubbleSort(arr)
 
 print("\n")
-print('Sorted Array in Ascending Order:')
+print('The array after sorting in Ascending Order by bubble sort is :')
 for i in range(len(arr)):
 	print("% d" % arr[i], end=" ")
