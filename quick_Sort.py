@@ -47,13 +47,13 @@ def quickSort(array, low, high):
 		quickSort(array, pi + 1, high)
 
 
-data = [64, 14, 85, 36, 19, 78, 77, 24, 27, 13]
+array = [64, 14, 85, 36, 19, 78, 77, 24, 27, 13]
 print("Unsorted Array")
-print(data)
+print(array)
 
-size = len(data)
+size = len(array)
 
-quickSort(data, 0, size - 1)
+quickSort(array, 0, size - 1)
 
-print('Sorted Array in Ascending Order:')
-print(data)
+print('The array after sorting in Ascending Order by selection sort is:')
+print(array)
