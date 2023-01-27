@@ -56,4 +56,5 @@ size = len(array)
 quickSort(array, 0, size - 1)
 
 print('The array after sorting in Ascending Order by selection sort is:')
-print(array)
+for i in range(len(arr)):
+	print("% d" % arr[i], end=" ")

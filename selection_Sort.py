@@ -1,4 +1,4 @@
-# Selection sort in Python
+# Python program for implementation of Selection sort.
 # time complexity O(n*n)
 #sorting by finding min_index
 def selectionSort(array, size):
@@ -20,4 +20,6 @@ print(arr)
 size = len(arr)
 selectionSort(arr, size)
 print('The array after sorting in Ascending Order by selection sort is:')
-print(arr)
+for i in range(len(arr)):
+	print("% d" % arr[i], end=" ")
+#Code by GeeksforGeeks
