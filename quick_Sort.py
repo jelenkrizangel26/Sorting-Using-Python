@@ -33,28 +33,28 @@ def partition(array, low, high):
 
 
 def quickSort(array, low, high):
-	if low < high:
+  if low < high:
 
-		# Find pivot element such that
-		# element smaller than pivot are on the left
-		# element greater than pivot are on the right
-		pi = partition(array, low, high)
+	# Find pivot element such that
+	# element smaller than pivot are on the left
+	# element greater than pivot are on the right
+    pi =  partition(array, low, high)
 
 		# Recursive call on the left of pivot
-		quickSort(array, low, pi - 1)
+    quickSort(array, low, pi - 1)
 
 		# Recursive call on the right of pivot
-		quickSort(array, pi + 1, high)
+    quickSort(array, pi + 1, high)
+    print(array)
 
 
 array = [64, 14, 85, 36, 19, 78, 77, 24, 27, 13]
-print("Unsorted Array")
-print(array)
-
+print("\n")
+print("Sorting Process")
 size = len(array)
-
 quickSort(array, 0, size - 1)
 
+print("\n")
 print('The array after sorting in Ascending Order by selection sort is:')
-for i in range(len(arr)):
-	print("% d" % arr[i], end=" ")
+for i in range(len(array)):
+	print("% d" % array[i], end=" ")

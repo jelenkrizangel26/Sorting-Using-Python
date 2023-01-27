@@ -1,6 +1,5 @@
 # Python program for implementation of Selection sort.
-# time complexity O(n*n)
-#sorting by finding min_index
+
 def selectionSort(array, size):
 	
 	for ind in range(size):
@@ -13,12 +12,16 @@ def selectionSort(array, size):
 		# swapping the elements to sort the array
 		(array[ind], array[min_index]) = (array[min_index], array[ind])
 
+		print(array)
+
 arr = [64, 14, 85, 36, 19, 78, 77, 24, 27, 13]
-print("Unsorted Array")
+print("\n")
+print("Sorting process")
 print(arr)
 
 size = len(arr)
 selectionSort(arr, size)
+print("\n")
 print('The array after sorting in Ascending Order by selection sort is:')
 for i in range(len(arr)):
 	print("% d" % arr[i], end=" ")

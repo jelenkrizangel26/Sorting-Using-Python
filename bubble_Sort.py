@@ -1,38 +1,30 @@
-# Python program for implementation of Bubble Sort
+# # Python program for implementation of Bubble sort.
+def bubbleSort(array):
+    
+  # loop to access each array element
+  for i in range(len(array)):
 
-def bubbleSort(arr):
-	n = len(arr)
-	# optimize code, so if the array is already sorted, it doesn't need
-	# to go through the entire process
-	swapped = False
-	# Traverse through all array elements
-	for i in range(n-1):
-		# range(n) also work but outer loop will
-		# repeat one time more than needed.
-		# Last i elements are already in place
-		for j in range(0, n-i-1):
+    # loop to compare array elements
+    for j in range(0, len(array) - i - 1):
 
-			# traverse the array from 0 to n-i-1
-			# Swap if the element found is greater
-			# than the next element
-			if arr[j] > arr[j + 1]:
-				swapped = True
-				arr[j], arr[j + 1] = arr[j + 1], arr[j]
-		
-		if not swapped:
-			# if we haven't needed to make a single swap, we
-			# can just exit the main loop.
-			return
+      # compare two adjacent elements
+      # change > to < to sort in descending order
+      if array[j] > array[j + 1]:
+
+        # swapping elements if elements
+        # are not in the intended order
+        temp = array[j]
+        array[j] = array[j+1]
+        array[j+1] = temp
+        print(array)
 
 
-# Driver code to test above
 arr = [64, 14, 85, 36, 19, 78, 77, 24, 27, 13]
-print("Unsorted Array")
-print(arr)
 
+print("Sorting Process:")
 bubbleSort(arr)
-print("Sorted array is:")
+
+print("\n")
+print('Sorted Array in Ascending Order:')
 for i in range(len(arr)):
 	print("% d" % arr[i], end=" ")
-
-#Special thanks to GeeksforGeeks
